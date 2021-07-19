@@ -8,8 +8,8 @@
 1. Клонируйте репозиторий и используйте:
 
 ```sh
-git clone https://github.com/dasha-samples/dasha-miio-vacuum-cleaner
-cd dasha-miio-vacuum-cleaner
+git clone https://github.com/dasha-samples/dasha-miio-vacuum-cleaner-non-us
+cd dasha-miio-vacuum-cleaner-non-us
 npm install
 ```
 
