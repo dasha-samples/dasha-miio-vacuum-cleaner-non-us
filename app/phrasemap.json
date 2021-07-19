@@ -1,0 +1,20 @@
+{
+  "default": {
+    "voiceInfo": {
+      "emotion": "good",
+      "lang": "ru-RU",
+      "speaker": "alena",
+      "speed": 1.2
+    },
+    "phrases": {
+      "battery_level": [
+        { "text": "Процент уровня заряда батареи " },
+        { "id": "level", "type": "dynamic" }
+      ]
+    },
+    "types": {},
+    "macros": {
+      "battery_level": {}
+    }
+  }
+}
