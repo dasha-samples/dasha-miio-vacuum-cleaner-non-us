@@ -5,7 +5,7 @@
     "start": "node -r dotenv/config index.js"
   },
   "dependencies": {
-    "@dasha.ai/sdk": "^0.3.0",
+    "@dasha.ai/sdk": "^0.6.5",
     "dotenv": "^10.0.0",
     "node-mihome": "0.0.32"
   },
