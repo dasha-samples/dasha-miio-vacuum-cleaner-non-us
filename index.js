@@ -47,7 +47,13 @@ async function main() {
 
   const conv = app.createConversation({ phone: process.argv[2] ?? "chat" });
 
-  if (conv.input.phone !== "chat") conv.on("transcription", console.log);
+conv.audio.tts = "dasha";
+
+  if (conv.input.phone === "chat") {
+    await dasha.chat.createConsoleChat(conv);
+  } else {
+    conv.on("transcription", console.log);
+  }
 
   const logFile = await fs.promises.open("./log.txt", "w");
   await logFile.appendFile("#".repeat(100) + "\n");
@@ -62,8 +68,10 @@ async function main() {
       await logFile.appendFile(JSON.stringify(logEntry, undefined, 2) + "\n");
     }
   });
-
-  const result = await conv.execute();
+  
+  const result = await conv.execute({
+    channel: conv.input.phone === "chat" ? "text" : "audio",
+  });
   console.log(result.output);
 
   await app.stop();
